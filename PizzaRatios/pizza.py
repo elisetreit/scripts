@@ -36,7 +36,7 @@ def pizzaRecipe(hydration = 0.66, salt = 0.02, dough_balls = 8, dough_ball_weigh
     total_flour = total_weight / (1 + hydration + salt)
     final_flour = total_flour - preferment_flour
     final_water = final_flour * hydration
-    final_salt = final_flour * salt
+    final_salt = total_flour * salt
     print(f"Mix {round(final_flour)} grams flour, {round(final_water)} grams water, {round(final_salt)} grams salt, and a little oil if you are using bread flour with your preferment")
     print(f"correct amount of oil is a WIP")
     print(f"Knead for 10 minutes")
