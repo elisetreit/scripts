@@ -49,10 +49,10 @@ def pizzaRecipe(hydration = 0.66, salt = 0.02, dough_balls = 8, dough_ball_weigh
 
 if __name__ == "__main__":
     parser = argparse.ArgumentParser(description='Prints a pizza recipe based on parameters such as hydration and number of dough balls')
-    parser.add_argument('--hydration', type=float, default=0.66, help='The hydration of the dough, or the ratio of water to flour, expressed as a decimal')
-    parser.add_argument('--salt', type=float, default=0.02, help='The salt percentage of the dough, or the ratio of salt to flour, expressed as a decimal')
-    parser.add_argument('--dough_balls', type=int, default=8, help='The number of dough balls to make')
-    parser.add_argument('--dough_ball_weight', type=int, default=6, help='The weight of each dough ball in specified units')
-    parser.add_argument('--unit', type=str, default="oz", help='The unit of measure for the dough ball weight - either "oz" or "g"')
+    parser.add_argument('--hydration', type=float, default=0.66, help='The hydration of the dough, or the ratio of water to flour, expressed as a decimal (default 0.66)')
+    parser.add_argument('--salt', type=float, default=0.02, help='The salt percentage of the dough, or the ratio of salt to flour, expressed as a decimal (default 0.02)')
+    parser.add_argument('--dough_balls', type=int, default=8, help='The number of dough balls to make (default 8)')
+    parser.add_argument('--dough_ball_weight', type=int, default=6, help='The weight of each dough ball in specified units (default 6)')
+    parser.add_argument('--unit', type=str, default="oz", help='The unit of measure for the dough ball weight - either "oz" or "g" (default "oz")')
     args = parser.parse_args()
     pizzaRecipe(args.hydration, args.salt, args.dough_balls, args.dough_ball_weight, args.unit)
